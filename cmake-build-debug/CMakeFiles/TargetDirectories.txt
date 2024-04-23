@@ -1,3 +1,3 @@
-C:/Users/octav/CLionProjects/Grupo18_Projeto2/cmake-build-debug/CMakeFiles/Grupo18_Projeto2.dir
-C:/Users/octav/CLionProjects/Grupo18_Projeto2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/octav/CLionProjects/Grupo18_Projeto2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Leand/CLionProjects/Grupo18_Projeto2/cmake-build-debug/CMakeFiles/Grupo18_Projeto2.dir
+C:/Users/Leand/CLionProjects/Grupo18_Projeto2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Leand/CLionProjects/Grupo18_Projeto2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
