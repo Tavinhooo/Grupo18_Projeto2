@@ -25,25 +25,5 @@ struct aviao{
     passageiro *conjunto_de_passageiros; //apontador que existe para guardar os passageiros no aviao
 };
 
-struct chegada {
-    struct Item {
-        aviao aviao_data;
-        Item* seguinte;
-    };
-    Item* primeira;
-};
-struct pista {
-    struct Item {
-        aviao aviao_data;
-        Item* seguinte;
-    };
-    Item* primeira;
-};
-struct ja_foi {
-    struct Item {
-        aviao aviao_data;
-        Item* seguinte;
-    };
-    Item* primeira;
-};
+
 #endif //GRUPO18_PROJETO2_STRUCTS_H

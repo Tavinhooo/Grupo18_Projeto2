@@ -19,5 +19,6 @@ aviao criar_aviao(){
     novoAviao.origem= escolher_aleatoria("origem.txt");
     novoAviao.destino= "aeroporto eda";
     novoAviao.capacidade= capacidade_do_aviao();
+    return novoAviao;
 }
 
