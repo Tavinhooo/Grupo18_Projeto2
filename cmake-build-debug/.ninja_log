@@ -1,3 +1,6 @@
 # ninja log v5
 0	725	7355722410766694	CMakeFiles/Grupo18_Projeto2.dir/main.cpp.obj	293deb4e722ccbef
 727	928	7355722412765600	Grupo18_Projeto2.exe	f6d265e1a62bff92
+7	143	7355786355859352	CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj	4537402b11b1ae78
+20	409	7355786358519916	CMakeFiles/Grupo18_Projeto2.dir/main.cpp.obj	293deb4e722ccbef
+409	547	7355786359866063	Grupo18_Projeto2.exe	de01b12169b8dc2a
