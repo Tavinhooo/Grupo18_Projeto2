@@ -43,7 +43,7 @@ string chooseRandomLine(const string* lines, int& numero_linhas) {
 /*
  * esta funcao podemos tanto usar o ficheiro marca.txt ou tanto a categorias.txt, pois achamos que assim pouparia nos uma funcao
  */
-string Marca_ou_categoria_aleatoria(const string& nomeFicheiro) {
+string escolher_aleatoria(const string& nomeFicheiro) {
     int numero_de_linhas = 0;//inicializacao da variavel para contar o numero de linhas
     string* linhas = ler_ficheiro(nomeFicheiro, numero_de_linhas);//criacao de um apontador linhas que conta com a quantidade de linhas
     return chooseRandomLine(linhas,numero_de_linhas);//redireciona para criar a outra funcao

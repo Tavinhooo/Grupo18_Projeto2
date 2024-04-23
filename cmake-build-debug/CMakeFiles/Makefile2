@@ -80,12 +80,12 @@ clean: CMakeFiles/Grupo18_Projeto2.dir/clean
 CMakeFiles/Grupo18_Projeto2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Grupo18_Projeto2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target Grupo18_Projeto2"
 .PHONY : CMakeFiles/Grupo18_Projeto2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Grupo18_Projeto2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Grupo18_Projeto2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Grupo18_Projeto2.dir/rule

@@ -82,19 +82,51 @@ CMakeFiles/Grupo18_Projeto2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Grupo18_Projeto2.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\franc\CLionProjects\Grupo18_Projeto2\main.cpp -o CMakeFiles\Grupo18_Projeto2.dir\main.cpp.s
 
+CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj: CMakeFiles/Grupo18_Projeto2.dir/flags.make
+CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj: C:/Users/franc/CLionProjects/Grupo18_Projeto2/operacoes_de_avioes.cpp
+CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj: CMakeFiles/Grupo18_Projeto2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj -MF CMakeFiles\Grupo18_Projeto2.dir\operacoes_de_avioes.cpp.obj.d -o CMakeFiles\Grupo18_Projeto2.dir\operacoes_de_avioes.cpp.obj -c C:\Users\franc\CLionProjects\Grupo18_Projeto2\operacoes_de_avioes.cpp
+
+CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\franc\CLionProjects\Grupo18_Projeto2\operacoes_de_avioes.cpp > CMakeFiles\Grupo18_Projeto2.dir\operacoes_de_avioes.cpp.i
+
+CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\franc\CLionProjects\Grupo18_Projeto2\operacoes_de_avioes.cpp -o CMakeFiles\Grupo18_Projeto2.dir\operacoes_de_avioes.cpp.s
+
+CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj: CMakeFiles/Grupo18_Projeto2.dir/flags.make
+CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj: C:/Users/franc/CLionProjects/Grupo18_Projeto2/Abertura_de_ficheiro.cpp
+CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj: CMakeFiles/Grupo18_Projeto2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj -MF CMakeFiles\Grupo18_Projeto2.dir\Abertura_de_ficheiro.cpp.obj.d -o CMakeFiles\Grupo18_Projeto2.dir\Abertura_de_ficheiro.cpp.obj -c C:\Users\franc\CLionProjects\Grupo18_Projeto2\Abertura_de_ficheiro.cpp
+
+CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\franc\CLionProjects\Grupo18_Projeto2\Abertura_de_ficheiro.cpp > CMakeFiles\Grupo18_Projeto2.dir\Abertura_de_ficheiro.cpp.i
+
+CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\franc\CLionProjects\Grupo18_Projeto2\Abertura_de_ficheiro.cpp -o CMakeFiles\Grupo18_Projeto2.dir\Abertura_de_ficheiro.cpp.s
+
 # Object files for target Grupo18_Projeto2
 Grupo18_Projeto2_OBJECTS = \
-"CMakeFiles/Grupo18_Projeto2.dir/main.cpp.obj"
+"CMakeFiles/Grupo18_Projeto2.dir/main.cpp.obj" \
+"CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj" \
+"CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj"
 
 # External object files for target Grupo18_Projeto2
 Grupo18_Projeto2_EXTERNAL_OBJECTS =
 
 Grupo18_Projeto2.exe: CMakeFiles/Grupo18_Projeto2.dir/main.cpp.obj
+Grupo18_Projeto2.exe: CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj
+Grupo18_Projeto2.exe: CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj
 Grupo18_Projeto2.exe: CMakeFiles/Grupo18_Projeto2.dir/build.make
 Grupo18_Projeto2.exe: CMakeFiles/Grupo18_Projeto2.dir/linkLibs.rsp
 Grupo18_Projeto2.exe: CMakeFiles/Grupo18_Projeto2.dir/objects1.rsp
 Grupo18_Projeto2.exe: CMakeFiles/Grupo18_Projeto2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Grupo18_Projeto2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\franc\CLionProjects\Grupo18_Projeto2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Grupo18_Projeto2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Grupo18_Projeto2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

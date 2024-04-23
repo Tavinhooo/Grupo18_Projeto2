@@ -8,5 +8,5 @@
 #include <string>
 string* ler_ficheiro(const string& nomeFicheiro, int& numero_linhas);
 string chooseRandomLine(const string* lines, int& numero_linhas);
-string Marca_ou_categoria_aleatoria(const string& nomeFicheiro);
+string escolher_aleatoria(const string& nomeFicheiro);
 #endif //PROJETOEDA_ABERTURA_DE_FICHEIRO_H

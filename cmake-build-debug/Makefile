@@ -128,6 +128,30 @@ Grupo18_Projeto2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/build
 .PHONY : Grupo18_Projeto2/fast
 
+Abertura_de_ficheiro.obj: Abertura_de_ficheiro.cpp.obj
+.PHONY : Abertura_de_ficheiro.obj
+
+# target to build an object file
+Abertura_de_ficheiro.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.obj
+.PHONY : Abertura_de_ficheiro.cpp.obj
+
+Abertura_de_ficheiro.i: Abertura_de_ficheiro.cpp.i
+.PHONY : Abertura_de_ficheiro.i
+
+# target to preprocess a source file
+Abertura_de_ficheiro.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.i
+.PHONY : Abertura_de_ficheiro.cpp.i
+
+Abertura_de_ficheiro.s: Abertura_de_ficheiro.cpp.s
+.PHONY : Abertura_de_ficheiro.s
+
+# target to generate assembly for a file
+Abertura_de_ficheiro.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/Abertura_de_ficheiro.cpp.s
+.PHONY : Abertura_de_ficheiro.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -152,6 +176,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+operacoes_de_avioes.obj: operacoes_de_avioes.cpp.obj
+.PHONY : operacoes_de_avioes.obj
+
+# target to build an object file
+operacoes_de_avioes.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.obj
+.PHONY : operacoes_de_avioes.cpp.obj
+
+operacoes_de_avioes.i: operacoes_de_avioes.cpp.i
+.PHONY : operacoes_de_avioes.i
+
+# target to preprocess a source file
+operacoes_de_avioes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.i
+.PHONY : operacoes_de_avioes.cpp.i
+
+operacoes_de_avioes.s: operacoes_de_avioes.cpp.s
+.PHONY : operacoes_de_avioes.s
+
+# target to generate assembly for a file
+operacoes_de_avioes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grupo18_Projeto2.dir\build.make CMakeFiles/Grupo18_Projeto2.dir/operacoes_de_avioes.cpp.s
+.PHONY : operacoes_de_avioes.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Grupo18_Projeto2
+	@echo ... Abertura_de_ficheiro.obj
+	@echo ... Abertura_de_ficheiro.i
+	@echo ... Abertura_de_ficheiro.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... operacoes_de_avioes.obj
+	@echo ... operacoes_de_avioes.i
+	@echo ... operacoes_de_avioes.s
 .PHONY : help
 
 
