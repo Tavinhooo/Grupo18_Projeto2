@@ -27,7 +27,7 @@ struct aviao{
 
 struct Fila {
     struct Item {
-        int     valor;
+        aviao aviao_data;
         Item* seguinte;
     };
     Item* primeira;
