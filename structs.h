@@ -25,5 +25,12 @@ struct aviao{
     passageiro *conjunto_de_passageiros; //apontador que existe para guardar os passageiros no aviao
 };
 
+struct Fila {
+    struct Item {
+        aviao aviao_data;
+        Item* seguinte;
+    };
+    Item* primeira;
+};
 
 #endif //GRUPO18_PROJETO2_STRUCTS_H
