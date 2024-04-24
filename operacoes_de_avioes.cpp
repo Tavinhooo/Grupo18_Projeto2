@@ -50,3 +50,38 @@ passageiro criar_passageiro(string bilhete_ja_saidos[], int &tamanho) {
     novoPassageiro.nacionalidade = escolher_aleatoria("nacionalidade.txt");
     return novoPassageiro;
 }
+
+bool Vazia(Fila& f){
+    return f.primeira == nullptr;
+}
+void Nova(Fila& f){
+    f.primeira = nullptr;
+}
+void Entra(Fila& f, aviao &data_aviao){
+    Fila::Item* novoItem = new Fila::Item;
+    novoItem->aviao_data = data_aviao;
+    novoItem->seguinte = nullptr;
+    if(Vazia(f)){
+        f.primeira = novoItem;
+    }
+    else{
+        Fila::Item* aux = f.primeira;
+        while (aux->seguinte !=nullptr){
+            aux=aux->seguinte;
+        }
+        aux->seguinte = novoItem;
+    }
+}
+void Escreve(Fila& f){
+    cout << "entrou aqui2" << endl;
+    if (Vazia(f))
+        cout << "Fila vazia" << endl;
+    else{
+        Fila::Item *item = f.primeira;
+        cout << "entrou aqui" << endl;
+        while(item!= nullptr){
+            cout <<item->aviao_data.origem << endl;
+            item = item->seguinte;
+        }
+    }
+}
