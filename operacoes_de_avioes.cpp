@@ -85,3 +85,33 @@ void Escreve(Fila& f){
         }
     }
 }
+
+void Sai(Fila& f){
+    if (Vazia(f))
+        throw ERRO_FILA_VAZIA;
+    Fila::Item * itemAux = f.primeira;
+    f.primeira = itemAux->seguinte;
+    delete itemAux;
+}
+void troca_de_Filas(Fila& f1, Fila &f2){
+    if(Vazia(f1)){
+        cout << "Fila que deve ser removido um aviao está vazia" << endl;
+    }
+    else{
+        Fila::Item* novoItem = new Fila::Item;
+        novoItem->aviao_data = f1.primeira->aviao_data;
+        novoItem->seguinte = nullptr;
+        if (Vazia(f2)) {
+            f2.primeira = novoItem;
+        }else{
+            Fila::Item* aux2 = f2.primeira;
+            while (aux2->seguinte !=nullptr){
+                cout << "entrou neste ciclo";
+                aux2=aux2->seguinte;
+                cout << "hello" << endl;
+            }
+            aux2->seguinte = novoItem;
+        }
+        Sai(f1);
+    }
+}
