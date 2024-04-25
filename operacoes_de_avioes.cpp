@@ -12,9 +12,9 @@ using namespace std;
 int capacidade_do_aviao(){
     return ((rand()%11) + 5); //5-15
 }
-bool bilhete_existe(string *bilhete_ja_saidos, string &bilhete) {
-    for (int i = 0; bilhete_ja_saidos[i] != ""; i++) {
-        if (bilhete_ja_saidos[i] == bilhete) {
+bool bilhete_existe(string *bilhete_ja_saidos, string &bilhete) { 
+    for (int i = 0; bilhete_ja_saidos[i] != ""; i++) {//loop sobre todos os números já saídos diferentes de ""
+        if (bilhete_ja_saidos[i] == bilhete) {//verifica se o bilhete é igual a um bilhete que já saiu
             return true;
         }
     }
@@ -22,32 +22,32 @@ bool bilhete_existe(string *bilhete_ja_saidos, string &bilhete) {
 }
 string criar_bilhete(string *bilhete_ja_saidos, int &tamanho) {
     string bilhete = "TK";
-    int numero_pos_TK = rand() % 9999999999;
-    bilhete += to_string(numero_pos_TK);
-    while (bilhete_existe(bilhete_ja_saidos, bilhete)) {
-        numero_pos_TK = rand() % 9999999999;
-        bilhete = "TK" + to_string(numero_pos_TK);
+    int numero_pos_TK = rand() % 9999999999;//gera um numero aleatorio de 0 à 9999999999
+    bilhete += to_string(numero_pos_TK);//transforma o numero que obtive em string e junta com a parte "TK"
+    while (bilhete_existe(bilhete_ja_saidos, bilhete)) {//loop que verifica se o bilhete já saiu
+        numero_pos_TK = rand() % 9999999999;//gera um numero aleatorio de 0 à 9999999999
+        bilhete = "TK" + to_string(numero_pos_TK);//transforma o numero que obtive em string e junta com a parte "TK"
     }
     tamanho++;
-    bilhete_ja_saidos[tamanho - 1] = bilhete;
-    return bilhete_ja_saidos[tamanho - 1];
+    bilhete_ja_saidos[tamanho - 1] = bilhete;//adiciona o novo bilhete à ultima posição do array
+    return bilhete_ja_saidos[tamanho - 1];//retorna o último número de série adicionado ao array
 }
 
 aviao criar_aviao(){
     aviao novoAviao;
-    novoAviao.nome_Do_Voo=escolher_aleatoria("voo.txt");
-    novoAviao.modelo_Do_Aviao= escolher_aleatoria("modelo.txt");
-    novoAviao.origem= escolher_aleatoria("origem.txt");
-    novoAviao.destino= "aeroporto eda";
-    novoAviao.capacidade= capacidade_do_aviao();
+    novoAviao.nome_Do_Voo=escolher_aleatoria("voo.txt");//atribui um voo aleatorio do ficheiro
+    novoAviao.modelo_Do_Aviao= escolher_aleatoria("modelo.txt");//atribui um modelo aleatorio do ficheiro
+    novoAviao.origem= escolher_aleatoria("origem.txt");//atribui uma origem aleatorio do ficheiro
+    novoAviao.destino= "aeroporto eda";//como o aviao esta a chegar ao aeroporto eda
+    novoAviao.capacidade= capacidade_do_aviao();//um valor aleatorio de 5-15
     return novoAviao;
 }
 passageiro criar_passageiro(string bilhete_ja_saidos[], int &tamanho) {
     passageiro novoPassageiro;
-    novoPassageiro.numero_bilhete = criar_bilhete(bilhete_ja_saidos, tamanho);
-    novoPassageiro.p_Nome = escolher_aleatoria("primeiro_nome.txt");
-    novoPassageiro.s_Nome = escolher_aleatoria("segundo_nome.txt");
-    novoPassageiro.nacionalidade = escolher_aleatoria("nacionalidade.txt");
+    novoPassageiro.numero_bilhete = criar_bilhete(bilhete_ja_saidos, tamanho);//atribui um bilhete ao passageiro
+    novoPassageiro.p_Nome = escolher_aleatoria("primeiro_nome.txt");//atribui um primeiro nome aleatorio do ficheiro
+    novoPassageiro.s_Nome = escolher_aleatoria("segundo_nome.txt");//atribui um segundo nome aleatorio do ficheiro
+    novoPassageiro.nacionalidade = escolher_aleatoria("nacionalidade.txt");//atribui nacionalidade aleatorio do ficheiro
     return novoPassageiro;
 }
 
