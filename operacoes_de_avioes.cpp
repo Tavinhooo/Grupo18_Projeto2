@@ -57,7 +57,7 @@ bool Vazia(Fila& f){
 void Nova(Fila& f){
     f.primeira = nullptr;
 }
-void Entra(Fila& f, aviao &data_aviao){
+void Entra(Fila& f, aviao data_aviao){
     Fila::Item* novoItem = new Fila::Item;
     novoItem->aviao_data = data_aviao;
     novoItem->seguinte = nullptr;
