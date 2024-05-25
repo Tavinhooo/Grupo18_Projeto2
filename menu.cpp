@@ -37,18 +37,18 @@ int menu(Fila &chegando, Fila &pista, Fila &partida,int argc,char *argv[],string
                         aeroporto_abriu = false;
                     }
                 }else{
-                    if (Comprimento(partida) == 5) {
+                    if (Comprimento(partida) == 5) {//caso a pista e a partida estejam completas
                         Sai(partida);
                         troca_de_Filas(pista, partida);
                         troca_de_Filas_para_pista(chegando, pista,bilhete_ja_saidos,tamanho);
                         Entra(chegando, criar_aviao(bilhete_ja_saidos,tamanho));
                     }
-                    else if (Comprimento(partida) < 5 && Comprimento(pista) == 7) {
+                    else if (Comprimento(partida) < 5 && Comprimento(pista) == 7) {//caso a pista estaja completa mas a partida nao
                         troca_de_Filas(pista, partida);
                         troca_de_Filas_para_pista(chegando, pista,bilhete_ja_saidos,tamanho);
                         Entra(chegando, criar_aviao(bilhete_ja_saidos,tamanho));
                     }
-                    else if (Comprimento(pista) < 7 ) {
+                    else if (Comprimento(pista) < 7 ) {//caso a pista nao esteja completa
                         troca_de_Filas_para_pista(chegando, pista,bilhete_ja_saidos,tamanho);
                         Entra(chegando, criar_aviao(bilhete_ja_saidos,tamanho));
                     }
