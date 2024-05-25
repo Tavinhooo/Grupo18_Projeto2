@@ -72,6 +72,11 @@ int menu(Fila &chegando, Fila &pista, Fila &partida,int argc,char *argv[],string
         else if(ciclo  == 'E' || ciclo == 'e'){
             Emergencia(chegando,pista,partida,bilhete_ja_saidos,tamanho);
         }
+        else if(ciclo == 'O' || cilco == 'O'){
+            procurar_passageiro_na_fila(chegando);
+            procurar_passageiro_na_fila(pista);
+            procurar_passageiro_na_fila(partida);
+        }
         else{
             cerr << "Opcao invalida" << endl;
             sair = 1;
