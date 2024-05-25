@@ -204,20 +204,27 @@ void abrirAeroporto() {
     aeroporto_abriu = true;
 }
 
-void AeroportoAbriu(Fila &chegando, Fila &pista, Fila &partida, string bilhete_ja_saidos[], int &tamanho) {
+void AeroportoAbriu(Fila &chegando, Fila &pista, Fila &partida) {
     int conta_chegada = 0;
     while (Comprimento(chegando) > 10 && conta_chegada < 2) {
         troca_de_Filas(chegando, pista);
         conta_chegada++;
     }
-    while (!Vazia(pista) && !Vazia(partida)) {
+    int conta_pista = 0;
+    while (Comprimento(pista) > 7 && conta_pista < 2) {
         troca_de_Filas(pista, partida);
+        conta_pista++;
+    }
+    int conta_partida = 0;
+    while (Comprimento(partida) > 5 && conta_partida < 2) {
         Sai(partida);
+        conta_partida++;
     }
     if(Comprimento(chegando) < 10){
         aeroporto_abriu = false; // Reseta o estado de aeroporto recém-aberto
     }
 }
+
 
 void Inverte(Fila& f) {
     if (Vazia(f) || f.primeira->seguinte == nullptr) // Se a fila estiver vazia ou tiver apenas um elemento, não há necessidade de inverter
