@@ -91,28 +91,25 @@ void gravar_aeroporto(Fila f1, Fila f2, Fila f3) {
     }
     ficheiro.close();
 }
-/*
-aviao obtencao_dos_valores(ifstream &ficheiro, string &linha) {
-    aviao aviao_auxiliar; //criação de um aviao auxiliar para facilitar a obtenção dos valores que estão dentro de um ficheiro
-    getline(ficheiro, linha); // ignora esta primeira linha que é "---------------" que aparece logo após aproximação
-    while (getline(ficheiro, linha) && linha != "---------------") {
-        if (linha.substr(0, 5) == "Voo: ") {
-            aviao_auxiliar.nome_Do_Voo = linha.substr(5);
-        } else if (linha.substr(0, 8) == "Modelo: ") {
-            aviao_auxiliar.modelo_Do_Aviao = linha.substr(8);
-        } else if (linha.substr(0, 8) == "Origem: ") {
-            aviao_auxiliar.origem = linha.substr(8);
-        } else if (linha.substr(0, 9) == "Destino: ") {
-            aviao_auxiliar.destino = linha.substr(9);
-        }
-    }
-    return aviao_auxiliar;
-}*/
+//Remove todos os elementos da Fila(Limpa)
 void LimparFila(Fila &f) {
     while (!Vazia(f)) {
         Sai(f);
     }
 }
+/*
+* Carrega dados de um arquivo de texto para preencher as filas do aeroporto.
+* Parâmetros:
+* - chegando: Referência para a fila de aviões em aproximação.
+* - pista: Referência para a fila de aviões na pista de decolagem.
+* - partida: Referência para a fila de aviões em partida.
+* - argc: Número de argumentos passados para o programa.
+* - argv: Array de strings contendo os argumentos passados para o programa.
+* A função verifica se o arquivo especificado existe e o abre.
+* Limpa todas as filas do aeroporto.
+* Lê cada linha do arquivo e preenche as filas com os dados encontrados.
+* Fecha o arquivo após a leitura.
+*/
 void carregar_aeroporto(Fila &chegando, Fila &pista, Fila &partida, int argc, char *argv[]) {
     if (argc < 2) {
         cerr << "Numero de argumentos inválido!" << endl;
@@ -174,18 +171,9 @@ void carregar_aeroporto(Fila &chegando, Fila &pista, Fila &partida, int argc, ch
 
     file.close();
 }
+//Esta função pede ao operador por quantos ciclos quer fechar o aeroporto e deixa a variável "fechado" true durante esses ciclos
 
-/*else{
-        cout << "Escolhe qual dos ficheiros pretende carregar:" << endl;
-        int i = 1;
-        while (argv[i] != nullptr){
-            cout << "Ficheiro :" << argv[i];
-            i++;
-        }
-
-    }*/
-
-void fecharAeroporto() {//Esta função pede ao operador por quantos ciclos quer fechar o aeroporto e deixa a variável "fechado" true durante esses ciclos
+void fecharAeroporto() {
     int ciclos;
     do {
         cout << "Por quantos dias deseja fechar o aeroporto? ";
@@ -197,8 +185,8 @@ void fecharAeroporto() {//Esta função pede ao operador por quantos ciclos quer
     fechado = true;
     ciclos_fechado = ciclos;
 }
-
-void abrirAeroporto() {//Abrir manualmente o aeroporto, também usada para abrir o aeroporto no menu aeroporto 
+//muda o estado do aeroporto
+void abrirAeroporto() {
     fechado = false;
     ciclos_fechado = 0;
     aeroporto_abriu = true;
@@ -270,3 +258,47 @@ void Emergencia(Fila& f1, Fila& f2, Fila& f3, string bilhete_ja_saidos[], int& t
     // Adiciona um novo avião à fila de aproximação (f1) após remover a emergência
     Entra(f1, criar_aviao(bilhete_ja_saidos, tamanho));
 }
+passageiro* procurar_passageiro_na_fila(Fila& fila) {
+    string primeiro_nome;
+    cout << "Digite o primeiro nome do passageiro que deseja buscar: ";
+    cin >> primeiro_nome;
+
+    // Inicia a busca percorrendo cada avião na fila
+    Fila::Item* aux = fila.primeira;
+    while (aux != nullptr) {
+        // Obtém o primeiro passageiro na fila do avião atual
+        Fila_Passageiros::Item* passageiro = aux->aviao_data.conjunto_de_passageiros.primeira;
+        // Percorre todos os passageiros do avião atual
+        while (passageiro != nullptr) {
+            // Verifica se o primeiro nome do passageiro corresponde ao nome procurado
+            if (passageiro->data_passageiro.p_Nome == primeiro_nome) {
+                // Retorna um ponteiro para o passageiro encontrado
+                return &(passageiro->data_passageiro);
+            }
+            // Avança para o próximo passageiro na fila do avião
+            passageiro = passageiro->seguinte;
+        }
+        // Avança para o próximo avião na fila
+        aux = aux->seguinte;
+    }
+    // Retorna nullptr se o passageiro não for encontrado em nenhum avião
+    return nullptr;
+}
+//funcao nao utilzada
+/*
+aviao obtencao_dos_valores(ifstream &ficheiro, string &linha) {
+    aviao aviao_auxiliar; //criação de um aviao auxiliar para facilitar a obtenção dos valores que estão dentro de um ficheiro
+    getline(ficheiro, linha); // ignora esta primeira linha que é "---------------" que aparece logo após aproximação
+    while (getline(ficheiro, linha) && linha != "---------------") {
+        if (linha.substr(0, 5) == "Voo: ") {
+            aviao_auxiliar.nome_Do_Voo = linha.substr(5);
+        } else if (linha.substr(0, 8) == "Modelo: ") {
+            aviao_auxiliar.modelo_Do_Aviao = linha.substr(8);
+        } else if (linha.substr(0, 8) == "Origem: ") {
+            aviao_auxiliar.origem = linha.substr(8);
+        } else if (linha.substr(0, 9) == "Destino: ") {
+            aviao_auxiliar.destino = linha.substr(9);
+        }
+    }
+    return aviao_auxiliar;
+}*/

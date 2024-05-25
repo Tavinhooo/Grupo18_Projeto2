@@ -9,20 +9,19 @@
 #include "operacoes_de_passageiros.h"
 
 using namespace std;
-
+/*
+* Retorna a capacidade aleatória de um avião (entre 5 e 15 passageiros).
+*/
 int capacidade_do_aviao(){
     return ((rand()%11) + 5); //5-15
 }
 /*
-aviao reseta_aviao(aviao novoAviao){
-    novoAviao.nome_Do_Voo= "";
-    novoAviao.modelo_Do_Aviao= "";
-    novoAviao.origem= "";
-    novoAviao.destino= "";
-    novoAviao.capacidade= 0;
-    Nova_P(novoAviao.conjunto_de_passageiros);
-
-}*/
+* Cria um novo avião com informações aleatórias e uma lista de passageiros preenchida.
+* Parâmetros:
+* - bilhete_ja_saidos: Array de strings contendo os bilhetes já utilizados.
+* - tamanho: Referência para o tamanho atual da lista de bilhetes.
+* Retorna o avião criado.
+*/
 aviao criar_aviao(string bilhete_ja_saidos[], int &tamanho){
     aviao novoAviao;
     novoAviao.nome_Do_Voo=escolher_aleatoria("voo.txt");
@@ -36,14 +35,27 @@ aviao criar_aviao(string bilhete_ja_saidos[], int &tamanho){
     }
     return novoAviao;
 }
-
+/*
+* Verifica se uma fila de aviões está vazia.
+*/
 bool Vazia(Fila& f){
     return f.primeira == nullptr;
 }
+/*
+* Cria uma nova fila de aviões.
+* Parâmetros:
+* - f: Referência para a fila de aviões a ser criada.
+*/
 void Nova(Fila& f){
     f.primeira = nullptr;
 }
 
+/*
+* Adiciona um avião à fila de aviões.
+* Parâmetros:
+* - f: Referência para a fila de aviões.
+* - data_aviao: Avião a ser adicionado à fila.
+*/
 void Entra(Fila& f, aviao data_aviao){
     Fila::Item* novoItem = new Fila::Item;
     novoItem->aviao_data = data_aviao;
@@ -59,6 +71,11 @@ void Entra(Fila& f, aviao data_aviao){
         aux->seguinte = novoItem;
     }
 }
+/*
+* Exibe informações sobre os aviões na fila.
+* Parâmetros:
+* - f: Referência para a fila de aviões.
+*/
 void Escreve(Fila& f){
     if (!Vazia(f)) {
         Fila::Item *item = f.primeira;
@@ -82,6 +99,11 @@ void Escreve(Fila& f){
         }
     }
 }
+/*
+* Remove um avião da fila de aviões.
+* Parâmetros:
+* - f: Referência para a fila de aviões.
+*/
 void Sai(Fila& f){
     if (Vazia(f))
         throw ERRO_FILA_VAZIA;
@@ -89,6 +111,12 @@ void Sai(Fila& f){
     f.primeira = itemAux->seguinte;
     delete itemAux;
 }
+/*
+* Retorna o comprimento atual da fila de aviões.
+* Parâmetros:
+* - f: Referência para a fila de aviões.
+* Retorna o número de aviões na fila.
+*/
 int Comprimento(Fila& f){
     int tamanho = 0;
     if (!Vazia(f)) {
@@ -100,6 +128,12 @@ int Comprimento(Fila& f){
     }
     return  tamanho;
 }
+/*
+* Move um avião de uma fila para outra.
+* Parâmetros:
+* - f1: Referência para a fila de onde o avião será removido.
+* - f2: Referência para a fila para onde o avião será adicionado.
+*/
 void troca_de_Filas(Fila& f1, Fila &f2){
     if(Vazia(f1)){
         cout << "Fila que deve ser removido um aviao está vazia" << endl;
@@ -121,6 +155,14 @@ void troca_de_Filas(Fila& f1, Fila &f2){
         Sai(f1);
     }
 }
+/*
+* Move um avião de uma fila para a pista de decolagem, atualizando sua origem, destino e passageiros.
+* Parâmetros:
+* - f1: Referência para a fila de onde o avião será removido.
+* - f2: Referência para a fila que representa a pista de decolagem.
+* - bilhete_ja_saidos: Array de strings contendo os bilhetes já utilizados.
+* - tamanho: Referência para o tamanho atual da lista de bilhetes.
+*/
 void troca_de_Filas_para_pista(Fila& f1, Fila &f2,string bilhete_ja_saidos[], int &tamanho){//(Fila& f1, Fila &f2,string bilhete_ja_saidos[], int &tamanho) -> argumentos apra quando for possivel manipular as arvores
     if(Vazia(f1)){
         cout << "Fila que deve ser removido um aviao está vazia" << endl;
@@ -150,13 +192,14 @@ void troca_de_Filas_para_pista(Fila& f1, Fila &f2,string bilhete_ja_saidos[], in
 }
 void troca_Aviao2(Fila& origem, Fila& destino, const string& nome_voo, bool is_emergencia) {
     // Procura o avião com o nome do voo escolhido
-    Fila::Item* anterior = nullptr;// Declara um pointer 'anterior' que será usado para manter o aviao anterior ao atual na fila
-    Fila::Item* atual = origem.primeira;//Declara um pointer 'atual' e inicializa-o como o primeiro aviao da fila de origem.
-    while (atual != nullptr && atual->aviao_data.nome_Do_Voo != nome_voo) { //Percorre a fila até encontrar o aviao pretendido
-        anterior = atual; 
-        atual = atual->seguinte; 
+    Fila::Item* anterior = nullptr;
+    Fila::Item* atual = origem.primeira;
+    while (atual != nullptr && atual->aviao_data.nome_Do_Voo != nome_voo) {
+        anterior = atual;
+        atual = atual->seguinte;
     }
-    if (atual == nullptr) { //Verifica se o aviao não foi encontrado
+
+    if (atual == nullptr) {
         if (is_emergencia) {
             cout << "Aviao em emergencia nao encontrado." << endl;
         } else {
@@ -164,13 +207,15 @@ void troca_Aviao2(Fila& origem, Fila& destino, const string& nome_voo, bool is_e
         }
         return;
     }
-    // Remove aviao da fila de origem (chegada ou pista)
+
+    // Remover o avião da fila de origem (chegada,pista dependendo do que queremos)
     if (anterior != nullptr) {
         anterior->seguinte = atual->seguinte;
     } else {
         origem.primeira = atual->seguinte;
     }
-    // Adiciona o avião à fila de destino (pista ou descolagem)
+
+    // Adiciona o avião à fila de destino (pista, partida dependendo do que queremos)
     atual->seguinte = nullptr;
     if (Vazia(destino)) {
         destino.primeira = atual;
@@ -182,3 +227,14 @@ void troca_Aviao2(Fila& origem, Fila& destino, const string& nome_voo, bool is_e
         aux->seguinte = atual;
     }
 }
+
+/*
+aviao reseta_aviao(aviao novoAviao){
+    novoAviao.nome_Do_Voo= "";
+    novoAviao.modelo_Do_Aviao= "";
+    novoAviao.origem= "";
+    novoAviao.destino= "";
+    novoAviao.capacidade= 0;
+    Nova_P(novoAviao.conjunto_de_passageiros);
+
+}*/
