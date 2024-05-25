@@ -70,3 +70,31 @@ int Comprimento_P(Fila_Passageiros& f){
     }
     return  tamanho;
 }
+passageiro* procurar_passageiro_na_fila(Fila& fila) {
+    string primeiro_nome;
+    cout << "Digite o primeiro nome do passageiro que deseja buscar: ";
+    cin >> primeiro_nome;
+
+    // Inicia a busca percorrendo cada avião na fila
+    Fila::Item* aux = fila.primeira;
+    while (aux != nullptr) {
+        // Obtém o primeiro passageiro na fila do avião atual
+        Fila_Passageiros::Item* passageiro = aux->aviao_data.conjunto_de_passageiros.primeira;
+        // Percorre todos os passageiros do avião atual
+        while (passageiro != nullptr) {
+            // Verifica se o primeiro nome do passageiro corresponde ao nome procurado
+            if (passageiro->data_passageiro.p_Nome == primeiro_nome) {
+                // Retorna um ponteiro para o passageiro encontrado
+                return &(passageiro->data_passageiro);
+            }
+            // Avança para o próximo passageiro na fila do avião
+            passageiro = passageiro->seguinte;
+        }
+        // Avança para o próximo avião na fila
+        aux = aux->seguinte;
+    }
+    // Retorna nullptr se o passageiro não for encontrado em nenhum avião
+    return nullptr;
+    cout << "Passageiro nao encontrado ";
+     
+}
