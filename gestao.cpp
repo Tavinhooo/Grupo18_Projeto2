@@ -247,11 +247,11 @@ void Inverte(Fila& f) {
 void Emergencia(Fila& f1, Fila& f2, Fila& f3, string bilhete_ja_saidos[], int& tamanho) {
     string voo_emergencia, voo_descolar;
 
-    // Pedir ao utilizador para inserir os números dos voos pretendidos
+    // Pede ao utilizador para inserir o número do voo pretendido
     cout << "Insira o numero do voo em emergencia: ";
     cin >> voo_emergencia;
 
-    // Encontrar o voo em emergência na fila de aproximação (f1)
+    // Encontra o voo em emergência na fila de aproximação (f1)
     Fila::Item* atual = f1.primeira;
     while (atual != nullptr && atual->aviao_data.nome_Do_Voo != voo_emergencia) {
         atual = atual->seguinte;
