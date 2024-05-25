@@ -150,14 +150,13 @@ void troca_de_Filas_para_pista(Fila& f1, Fila &f2,string bilhete_ja_saidos[], in
 }
 void troca_Aviao2(Fila& origem, Fila& destino, const string& nome_voo, bool is_emergencia) {
     // Procura o avião com o nome do voo escolhido
-    Fila::Item* anterior = nullptr;
-    Fila::Item* atual = origem.primeira;
-    while (atual != nullptr && atual->aviao_data.nome_Do_Voo != nome_voo) {
-        anterior = atual;
-        atual = atual->seguinte;
+    Fila::Item* anterior = nullptr;// Declara um pointer 'anterior' que será usado para manter o aviao anterior ao atual na fila
+    Fila::Item* atual = origem.primeira;//Declara um pointer 'atual' e inicializa-o como o primeiro aviao da fila de origem.
+    while (atual != nullptr && atual->aviao_data.nome_Do_Voo != nome_voo) { //Percorre a fila até encontrar o aviao pretendido
+        anterior = atual; 
+        atual = atual->seguinte; 
     }
-
-    if (atual == nullptr) {
+    if (atual == nullptr) { //Verifica se o aviao não foi encontrado
         if (is_emergencia) {
             cout << "Aviao em emergencia nao encontrado." << endl;
         } else {
@@ -165,15 +164,13 @@ void troca_Aviao2(Fila& origem, Fila& destino, const string& nome_voo, bool is_e
         }
         return;
     }
-
-    // Remover o avião da fila de origem (chegada,pista dependendo do que queremos)
+    // Remove aviao da fila de origem (chegada ou pista)
     if (anterior != nullptr) {
         anterior->seguinte = atual->seguinte;
     } else {
         origem.primeira = atual->seguinte;
     }
-
-    // Adiciona o avião à fila de destino (pista, partida dependendo do que queremos)
+    // Adiciona o avião à fila de destino (pista ou descolagem)
     atual->seguinte = nullptr;
     if (Vazia(destino)) {
         destino.primeira = atual;
