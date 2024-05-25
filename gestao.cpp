@@ -198,7 +198,7 @@ void fecharAeroporto() {//Esta função pede ao operador por quantos ciclos quer
     ciclos_fechado = ciclos;
 }
 
-void abrirAeroporto() {//
+void abrirAeroporto() {//Abrir manualmente o aeroporto, também usada para abrir o aeroporto no menu aeroporto 
     fechado = false;
     ciclos_fechado = 0;
     aeroporto_abriu = true;
