@@ -1,31 +1,29 @@
+/*
+ * Grupo 18
+ * Membro 1 - Octávio Abreu -2151223
+ * Membro 2 - Francisco Fernandes 2168522
+ * Membro 3 - Manuel Gama 2106723
+ * Membro 4 - Leandro Rodrigues 2104123
+ */
+
 #include <iostream>
 #include "operacoes_de_avioes.h"
-#include "Abertura_de_ficheiro.h"
 #include "structs.h"
 #include "menu.h"
 
-int main() {
+int main(int argc, char *argv[]) {
     srand(time(0));
-    const int NUM_AVIOES = 10;
-    aviao listaDeAvioes[NUM_AVIOES];
     Fila chegando;
-    Nova(chegando);
-    for (int i = 0; i < 10; ++i) {
-        Entra(chegando, criar_aviao());
-    }
-    Escreve(chegando);
     Fila pista;
-    Nova(pista);
     Fila partida;
+    Nova(chegando);
+    Nova(pista);
     Nova(partida);
-    while (true) {
-        menu(chegando, pista, partida);
-        cout<<"chegando"<<endl;
-        Escreve(chegando);
-        cout<<"pista"<<endl;
-        Escreve(pista);
-        cout<<"partida"<<endl;
-        Escreve(partida);
+    int tamanho = 0;
+    string bilhete_ja_saidos[1000];
+    for (int i = 0; i < 10; ++i) {
+        Entra(chegando, criar_aviao(bilhete_ja_saidos,tamanho));
     }
+    menu(chegando,pista,partida,argc,argv,bilhete_ja_saidos,tamanho);
     return 0;
 }

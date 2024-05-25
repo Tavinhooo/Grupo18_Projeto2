@@ -1,0 +1,89 @@
+---------------
+Em aproximação
+---------------
+Voo: VN212
+Modelo: B787-8
+Origem: Madrid–Barajas Adolfo Suárez Airport (MAD) - Madrid, Spain
+Destino: aeroporto eda
+Passageiros: Alexander|KING|Greek|TK27406, Elijah|MILLER|Irish|TK24943, Olivia|DAVIS|Cambodian|TK6490, Scarlett|ALLEN|Australian|TK18391, Alexander|LEE|Brazilian|TK4286, Harper|ROBINSON|Malaysian|TK31692, Charlotte|JONES|Egyptian|TK16375, Scarlett|WHITE|Australian|TK22783, Jackson|ROBINSON|Malaysian|TK6982, Benjamin|TAYLOR|Swiss|TK14817, Noah|WILLIAMS|Swiss|TK29423, Evelyn|ROBINSON|Portuguese|TK22057, Amelia|SMITH|Vietnamese|TK22971, Isabella|WILSON|Kenyan|TK12627, Emily|WILLIAMS|Mongolian|TK7031
+Voo: VN212
+Modelo: B777-8
+Origem: Dallas/Fort Worth International Airport (DFW) - Dallas/Fort Worth, Texas, USA
+Destino: aeroporto eda
+Passageiros: Olivia|JACKSON|Icelandic|TK17267, Evelyn|MARTINEZ|Brazilian|TK13318, Alexander|HALL|Swiss|TK13060, Ava|GARCIA|Malaysian|TK8153, Evelyn|HARRIS|Irish|TK18434, Elizabeth|WILLIAMS|Dutch|TK8223, Olivia|MARTINEZ|Irish|TK4938
+Voo: AY525
+Modelo: B777-8
+Origem: Dallas/Fort Worth International Airport (DFW) - Dallas/Fort Worth, Texas, USA
+Destino: aeroporto eda
+Passageiros: Liam|ANDERSON|Portuguese|TK7997, James|HALL|Irish|TK12293, Alexander|JOHNSON|Swiss|TK17984, Charlotte|SMITH|Ukrainian|TK1549, Daniel|WILSON|Peruvian|TK6458, Emily|ALLEN|Swiss|TK19035, Scarlett|TAYLOR|Brazilian|TK22041
+Voo: EK262
+Modelo: B737 MAX 200
+Origem: Abu Dhabi International Airport (AUH) - Abu Dhabi, United Arab Emirates
+Destino: aeroporto eda
+Passageiros: Liam|ROBINSON|Portuguese|TK28238, Amelia|YOUNG|Dutch|TK20998, Amelia|ALLEN|Brazilian|TK7500, Ethan|DAVIS|Portuguese|TK11758, Elizabeth|LEWIS|Portuguese|TK3852, Jacob|BROWN|Brazilian|TK30253, Olivia|GARCIA|Cambodian|TK5772, Ava|DAVIS|Greek|TK16051, Abigail|THOMPSON|Kenyan|TK29771, Olivia|TAYLOR|Lebanese|TK563, Isabella|WILLIAMS|Greek|TK11471, Scarlett|SMITH|Swiss|TK163, Harper|HALL|Dutch|TK28448
+Voo: DL757
+Modelo: A330neo
+Origem: Zurich Airport (ZRH) - Zurich, Switzerland
+Destino: aeroporto eda
+Passageiros: Emma|GARCIA|Portuguese|TK12776, Liam|ROBINSON|Vietnamese|TK27377, Evelyn|TAYLOR|Mongolian|TK15851, Ethan|MARTINEZ|Greek|TK9407, Alexander|MOORE|Egyptian|TK28919, Ava|MOORE|Portuguese|TK29382, Mason|ROBINSON|Nigerian|TK4424, Benjamin|KING|Vietnamese|TK14346, Amelia|KING|Moroccan|TK15821, Elizabeth|HARRIS|Peruvian|TK10375, Harper|HARRIS|Jamaican|TK29355, Sophia|JOHNSON|Cambodian|TK13738, Elizabeth|KING|Ukrainian|TK23994, Grace|MARTIN|Mongolian|TK19158, William|HERNANDEZ|Dutch|TK774
+Voo: QR555
+Modelo: A320
+Origem: Melbourne Airport (MEL) - Melbourne, Australia
+Destino: aeroporto eda
+Passageiros: Emma|ROBINSON|Lebanese|TK1637, Jackson|WALKER|Lebanese|TK17087, Noah|LEE|Lebanese|TK3875, Ava|ANDERSON|Icelandic|TK31566, Lucas|RODRIGUEZ|Jamaican|TK12351, Grace|WALKER|Peruvian|TK18667, Ava|DAVIS|Malaysian|TK9011, Henry|MARTIN|Dutch|TK15635, Harper|YOUNG|Vietnamese|TK29212, Scarlett|MOORE|Jamaican|TK11556, Grace|LEWIS|Jamaican|TK25148, Charlotte|WILSON|Peruvian|TK25826, Amelia|SMITH|Peruvian|TK28280
+Voo: JL999
+Modelo: B777-8
+Origem: Madrid–Barajas Adolfo Suárez Airport (MAD) - Madrid, Spain
+Destino: aeroporto eda
+Passageiros: Elijah|MARTIN|Swiss|TK23338, James|ROBINSON|Peruvian|TK25183, Charlotte|MARTIN|Mongolian|TK15840, Charlotte|JACKSON|Irish|TK32623, William|GARCIA|Irish|TK4702, William|CLARK|Lebanese|TK23797, Elizabeth|MILLER|Egyptian|TK4372
+Voo: TG010
+Modelo: B787-10
+Origem: Domodedovo International Airport (DME) - Moscow, Russia
+Destino: aeroporto eda
+Passageiros: Grace|MARTINEZ|Finnish|TK10561, Henry|HALL|Finnish|TK20228, Mia|HALL|Kenyan|TK4538, Alexander|ANDERSON|Greek|TK13094, Elizabeth|RODRIGUEZ|Moroccan|TK7838, Noah|ROBINSON|Cambodian|TK14874, Henry|ALLEN|Irish|TK19850, Grace|THOMPSON|Egyptian|TK29805, Abigail|HALL|Portuguese|TK19871, Elizabeth|JONES|Ukrainian|TK23922, Harper|MARTIN|Icelandic|TK22017, William|LEWIS|Brazilian|TK14785, Benjamin|THOMPSON|Kenyan|TK3161, Elijah|JACKSON|Nigerian|TK1460
+Voo: EY858
+Modelo: B767-2C
+Origem: Cairo International Airport (CAI) - Cairo, Egypt
+Destino: aeroporto eda
+Passageiros: Daniel|LEE|Greek|TK12550, Evelyn|GARCIA|Moroccan|TK16153, Lucas|JACKSON|Vietnamese|TK28722, Alexander|TAYLOR|Brazilian|TK15742, Daniel|RODRIGUEZ|Jamaican|TK31048, Noah|MARTIN|Swiss|TK11456, Ethan|MOORE|Moroccan|TK763, Charlotte|LEE|Brazilian|TK25916, Liam|LEE|Jamaican|TK11378, Jackson|JACKSON|Peruvian|TK3073, Liam|HERNANDEZ|Swiss|TK6597, Evelyn|WILLIAMS|Australian|TK5972, Mason|WALKER|Irish|TK24708, Abigail|BROWN|Icelandic|TK9006
+Voo: BA161
+Modelo: B737 MAX 200
+Origem: Ben Gurion Airport (TLV) - Tel Aviv, Israel
+Destino: aeroporto eda
+Passageiros: Lucas|LEE|Mongolian|TK15261, Daniel|ANDERSON|Brazilian|TK16181, Evelyn|ROBINSON|Lebanese|TK1053, Emily|RODRIGUEZ|Icelandic|TK6551, Mason|RODRIGUEZ|Icelandic|TK3572, Charlotte|MOORE|Vietnamese|TK22280, Benjamin|ANDERSON|Peruvian|TK7899, Evelyn|DAVIS|Brazilian|TK18593, Lucas|JACKSON|Swiss|TK16876, Amelia|ROBINSON|Nigerian|TK29729, Benjamin|MILLER|Finnish|TK27176, Abigail|YOUNG|Lebanese|TK32360
+---------------
+Em pista
+---------------
+Voo: TG010
+Modelo: B777-300ER
+Origem: aeroporto eda
+Destino: Tan Son Nhat International Airport (SGN) - Ho Chi Minh City, Vietnam
+Passageiros: Michael|THOMAS|Brazilian|TK28694, Jackson|THOMAS|Malaysian|TK9927, Evelyn|HERNANDEZ|Moroccan|TK19906, Sophia|ALLEN|Icelandic|TK28771, Amelia|BROWN|Swiss|TK18061, Daniel|MARTIN|Swiss|TK24999, James|WHITE|Portuguese|TK10980
+Voo: LH020
+Modelo: B737 MAX
+Origem: aeroporto eda
+Destino: Frankfurt Airport (FRA) - Frankfurt, Germany
+Passageiros: Noah|WILLIAMS|Malaysian|TK21507, Noah|WALKER|Moroccan|TK20884, Benjamin|WILLIAMS|Egyptian|TK31930, Ethan|ALLEN|Egyptian|TK32367, Elizabeth|THOMAS|Lebanese|TK23632, Elizabeth|SMITH|Malaysian|TK24401, Alexander|RODRIGUEZ|Finnish|TK21167
+Voo: QF434
+Modelo: B787-10
+Origem: aeroporto eda
+Destino: Amsterdam Airport Schiphol (AMS) - Amsterdam, Netherlands
+Passageiros: Mason|THOMAS|Egyptian|TK17479, Abigail|WALKER|Mongolian|TK10932, Jacob|WALKER|Vietnamese|TK16249, Jacob|ANDERSON|Egyptian|TK5263, Mason|WHITE|Greek|TK9023, Jackson|SMITH|Cambodian|TK30783, Isabella|CLARK|Australian|TK27422, Lucas|THOMPSON|Peruvian|TK25825
+Voo: VN141
+Modelo: B737 MAX 9
+Origem: aeroporto eda
+Destino: Toronto Pearson International Airport (YYZ) - Toronto, Canada
+Passageiros: Amelia|ROBINSON|Greek|TK28795, Jackson|JOHNSON|Vietnamese|TK3824, Mia|JACKSON|Ukrainian|TK12212, Charlotte|SMITH|Mongolian|TK31694, Benjamin|JOHNSON|Portuguese|TK21148
+Voo: AF717
+Modelo: A319neo
+Origem: aeroporto eda
+Destino: Toronto Pearson International Airport (YYZ) - Toronto, Canada
+Passageiros: Harper|WILSON|Jamaican|TK5211, Elizabeth|THOMPSON|Lebanese|TK21901, Olivia|MARTIN|Dutch|TK17643, Michael|JOHNSON|Australian|TK18426, Emma|HERNANDEZ|Dutch|TK8455
+Voo: LH789
+Modelo: B777-8
+Origem: aeroporto eda
+Destino: Indira Gandhi International Airport (DEL) - New Delhi, India
+Passageiros: Grace|YOUNG|Finnish|TK19588, Elijah|JACKSON|Nigerian|TK25951, Liam|CLARK|Finnish|TK1199, Harper|ROBINSON|Portuguese|TK11612, Evelyn|WALKER|Moroccan|TK28805, Mia|CLARK|Irish|TK21434, Jackson|THOMPSON|Mongolian|TK26476, Lucas|JOHNSON|Greek|TK8609
+---------------
+Em descolagem
+---------------

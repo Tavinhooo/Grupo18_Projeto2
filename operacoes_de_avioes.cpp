@@ -6,49 +6,35 @@
 #include <cstdlib>
 #include "structs.h"
 #include <iostream>
+#include "operacoes_de_passageiros.h"
 
 using namespace std;
 
 int capacidade_do_aviao(){
     return ((rand()%11) + 5); //5-15
 }
-bool bilhete_existe(string *bilhete_ja_saidos, string &bilhete) { 
-    for (int i = 0; bilhete_ja_saidos[i] != ""; i++) {//loop sobre todos os números já saídos diferentes de ""
-        if (bilhete_ja_saidos[i] == bilhete) {//verifica se o bilhete é igual a um bilhete que já saiu
-            return true;
-        }
-    }
-    return false;
-}
-string criar_bilhete(string *bilhete_ja_saidos, int &tamanho) {
-    string bilhete = "TK";
-    int numero_pos_TK = rand() % 9999999999;//gera um numero aleatorio de 0 à 9999999999
-    bilhete += to_string(numero_pos_TK);//transforma o numero que obtive em string e junta com a parte "TK"
-    while (bilhete_existe(bilhete_ja_saidos, bilhete)) {//loop que verifica se o bilhete já saiu
-        numero_pos_TK = rand() % 9999999999;//gera um numero aleatorio de 0 à 9999999999
-        bilhete = "TK" + to_string(numero_pos_TK);//transforma o numero que obtive em string e junta com a parte "TK"
-    }
-    tamanho++;
-    bilhete_ja_saidos[tamanho - 1] = bilhete;//adiciona o novo bilhete à ultima posição do array
-    return bilhete_ja_saidos[tamanho - 1];//retorna o último número de série adicionado ao array
-}
+/*
+aviao reseta_aviao(aviao novoAviao){
+    novoAviao.nome_Do_Voo= "";
+    novoAviao.modelo_Do_Aviao= "";
+    novoAviao.origem= "";
+    novoAviao.destino= "";
+    novoAviao.capacidade= 0;
+    Nova_P(novoAviao.conjunto_de_passageiros);
 
-aviao criar_aviao(){
+}*/
+aviao criar_aviao(string bilhete_ja_saidos[], int &tamanho){
     aviao novoAviao;
-    novoAviao.nome_Do_Voo=escolher_aleatoria("voo.txt");//atribui um voo aleatorio do ficheiro
-    novoAviao.modelo_Do_Aviao= escolher_aleatoria("modelo.txt");//atribui um modelo aleatorio do ficheiro
-    novoAviao.origem= escolher_aleatoria("origem.txt");//atribui uma origem aleatorio do ficheiro
-    novoAviao.destino= "aeroporto eda";//como o aviao esta a chegar ao aeroporto eda
-    novoAviao.capacidade= capacidade_do_aviao();//um valor aleatorio de 5-15
+    novoAviao.nome_Do_Voo=escolher_aleatoria("voo.txt");
+    novoAviao.modelo_Do_Aviao= escolher_aleatoria("modelo.txt");
+    novoAviao.origem= escolher_aleatoria("origem.txt");
+    novoAviao.destino= "aeroporto eda";
+    novoAviao.capacidade= capacidade_do_aviao();
+    Nova_P(novoAviao.conjunto_de_passageiros);
+    for (int i = 0; i< novoAviao.capacidade ;i++){
+        Entra_P(novoAviao.conjunto_de_passageiros,criar_passageiro(bilhete_ja_saidos,tamanho));
+    }
     return novoAviao;
-}
-passageiro criar_passageiro(string bilhete_ja_saidos[], int &tamanho) {
-    passageiro novoPassageiro;
-    novoPassageiro.numero_bilhete = criar_bilhete(bilhete_ja_saidos, tamanho);//atribui um bilhete ao passageiro
-    novoPassageiro.p_Nome = escolher_aleatoria("primeiro_nome.txt");//atribui um primeiro nome aleatorio do ficheiro
-    novoPassageiro.s_Nome = escolher_aleatoria("segundo_nome.txt");//atribui um segundo nome aleatorio do ficheiro
-    novoPassageiro.nacionalidade = escolher_aleatoria("nacionalidade.txt");//atribui nacionalidade aleatorio do ficheiro
-    return novoPassageiro;
 }
 
 bool Vazia(Fila& f){
@@ -57,6 +43,7 @@ bool Vazia(Fila& f){
 void Nova(Fila& f){
     f.primeira = nullptr;
 }
+
 void Entra(Fila& f, aviao data_aviao){
     Fila::Item* novoItem = new Fila::Item;
     novoItem->aviao_data = data_aviao;
@@ -73,19 +60,28 @@ void Entra(Fila& f, aviao data_aviao){
     }
 }
 void Escreve(Fila& f){
-    cout << "entrou aqui2" << endl;
-    if (Vazia(f))
-        cout << "Fila vazia" << endl;
-    else{
+    if (!Vazia(f)) {
         Fila::Item *item = f.primeira;
-        cout << "entrou aqui" << endl;
-        while(item!= nullptr){
-            cout <<item->aviao_data.origem << endl;
+        while (item != nullptr) {
+            cout << "Voo: " << item->aviao_data.nome_Do_Voo << endl;
+            cout << "Modelo: " << item->aviao_data.modelo_Do_Aviao << endl;
+            cout << "Origem: " << item->aviao_data.origem << endl;
+            cout << "Destino: " << item->aviao_data.destino << endl;
+            cout << "Passageiros: ";
+            Fila_Passageiros::Item *passenger = item->aviao_data.conjunto_de_passageiros.primeira;
+            while (passenger != nullptr) {
+                cout << passenger->data_passageiro.p_Nome << ", ";
+                passenger = passenger->seguinte;
+                if (passenger->seguinte == nullptr){
+                    cout << passenger->data_passageiro.p_Nome;
+                    passenger = passenger->seguinte;
+                }
+            }
+            cout << endl;
             item = item->seguinte;
         }
     }
 }
-
 void Sai(Fila& f){
     if (Vazia(f))
         throw ERRO_FILA_VAZIA;
@@ -93,9 +89,21 @@ void Sai(Fila& f){
     f.primeira = itemAux->seguinte;
     delete itemAux;
 }
+int Comprimento(Fila& f){
+    int tamanho = 0;
+    if (!Vazia(f)) {
+        Fila::Item *Aux = f.primeira;
+        while (Aux != nullptr){
+            tamanho++;
+            Aux = Aux->seguinte;
+        }
+    }
+    return  tamanho;
+}
 void troca_de_Filas(Fila& f1, Fila &f2){
     if(Vazia(f1)){
         cout << "Fila que deve ser removido um aviao está vazia" << endl;
+        return;
     }
     else{
         Fila::Item* novoItem = new Fila::Item;
@@ -106,12 +114,74 @@ void troca_de_Filas(Fila& f1, Fila &f2){
         }else{
             Fila::Item* aux2 = f2.primeira;
             while (aux2->seguinte !=nullptr){
-                cout << "entrou neste ciclo";
                 aux2=aux2->seguinte;
-                cout << "hello" << endl;
             }
             aux2->seguinte = novoItem;
         }
         Sai(f1);
+    }
+}
+void troca_de_Filas_para_pista(Fila& f1, Fila &f2,string bilhete_ja_saidos[], int &tamanho){//(Fila& f1, Fila &f2,string bilhete_ja_saidos[], int &tamanho) -> argumentos apra quando for possivel manipular as arvores
+    if(Vazia(f1)){
+        cout << "Fila que deve ser removido um aviao está vazia" << endl;
+        return;
+    }
+    else{
+        Fila::Item* novoItem = new Fila::Item;
+        novoItem->aviao_data = f1.primeira->aviao_data;
+        novoItem->aviao_data.origem = "aeroporto eda";
+        novoItem->aviao_data.destino =escolher_aleatoria("destino.txt");
+        Nova_P(novoItem->aviao_data.conjunto_de_passageiros);
+        for (int i = 0; i< novoItem->aviao_data.capacidade ;i++){
+            Entra_P(novoItem->aviao_data.conjunto_de_passageiros,criar_passageiro(bilhete_ja_saidos,tamanho));
+        }
+        novoItem->seguinte = nullptr;
+        if (Vazia(f2)) {
+            f2.primeira = novoItem;
+        }else{
+            Fila::Item* aux2 = f2.primeira;
+            while (aux2->seguinte !=nullptr){
+                aux2=aux2->seguinte;
+            }
+            aux2->seguinte = novoItem;
+        }
+        Sai(f1);
+    }
+}
+void troca_Aviao2(Fila& origem, Fila& destino, const string& nome_voo, bool is_emergencia) {
+    // Procura o avião com o nome do voo escolhido
+    Fila::Item* anterior = nullptr;
+    Fila::Item* atual = origem.primeira;
+    while (atual != nullptr && atual->aviao_data.nome_Do_Voo != nome_voo) {
+        anterior = atual;
+        atual = atual->seguinte;
+    }
+
+    if (atual == nullptr) {
+        if (is_emergencia) {
+            cout << "Aviao em emergencia nao encontrado." << endl;
+        } else {
+            cout << "Aviao nao encontrado na pista para descolagem." << endl;
+        }
+        return;
+    }
+
+    // Remover o avião da fila de origem (chegada,pista dependendo do que queremos)
+    if (anterior != nullptr) {
+        anterior->seguinte = atual->seguinte;
+    } else {
+        origem.primeira = atual->seguinte;
+    }
+
+    // Adiciona o avião à fila de destino (pista, partida dependendo do que queremos)
+    atual->seguinte = nullptr;
+    if (Vazia(destino)) {
+        destino.primeira = atual;
+    } else {
+        Fila::Item* aux = destino.primeira;
+        while (aux->seguinte != nullptr) {
+            aux = aux->seguinte;
+        }
+        aux->seguinte = atual;
     }
 }

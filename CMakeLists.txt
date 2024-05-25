@@ -9,4 +9,10 @@ add_executable(Grupo18_Projeto2 main.cpp
         operacoes_de_avioes.cpp
         operacoes_de_avioes.cpp
         Abertura_de_ficheiro.cpp
-        Abertura_de_ficheiro.h)
+        Abertura_de_ficheiro.h
+        menu.h
+        menu.cpp
+        gestao.h
+        gestao.cpp
+        operacoes_de_passageiros.h
+        operacoes_de_passageiros.cpp)
