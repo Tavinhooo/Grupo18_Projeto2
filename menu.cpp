@@ -32,7 +32,7 @@ int menu(Fila &chegando, Fila &pista, Fila &partida,int argc,char *argv[],string
                 ciclos_fechado--;
             } else {
                 if(aeroporto_abriu) {
-                    AeroportoAbriu(chegando, pista, partida,bilhete_ja_saidos, tamanho);
+                    AeroportoAbriu(chegando, pista, partida);
                     if (Comprimento(chegando) <= 10){
                         aeroporto_abriu = false;
                     }
