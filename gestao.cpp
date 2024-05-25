@@ -185,7 +185,7 @@ void carregar_aeroporto(Fila &chegando, Fila &pista, Fila &partida, int argc, ch
 
     }*/
 
-void fecharAeroporto() {
+void fecharAeroporto() {//Esta função pede ao operador por quantos ciclos quer fechar o aeroporto e deixa a variável "fechado" true durante esses ciclos
     int ciclos;
     do {
         cout << "Por quantos dias deseja fechar o aeroporto? ";
@@ -198,33 +198,32 @@ void fecharAeroporto() {
     ciclos_fechado = ciclos;
 }
 
-void abrirAeroporto() {
+void abrirAeroporto() {//
     fechado = false;
     ciclos_fechado = 0;
     aeroporto_abriu = true;
 }
 
 void AeroportoAbriu(Fila &chegando, Fila &pista, Fila &partida) {
-    int conta_chegada = 0;
-    while (Comprimento(chegando) > 10 && conta_chegada < 2) {
+    int conta_chegada = 0; //contador para guardar quantos aviões são movidos da chegada para a pista
+    while (Comprimento(chegando) > 10 && conta_chegada < 2) { //Move dois aviões da fila chegando para a pista enquanto chegando tiver mais de 10 aviões
         troca_de_Filas(chegando, pista);
         conta_chegada++;
     }
-    int conta_pista = 0;
-    while (Comprimento(pista) > 7 && conta_pista < 2) {
+    int conta_pista = 0; //contador para guardar quantos aviões são movidos da pista para a partida
+    while (Comprimento(pista) > 7 && conta_pista < 2) { //Move dois aviões da fila pista para a partida enquanto pista tiver mais de 7 aviões
         troca_de_Filas(pista, partida);
         conta_pista++;
     }
-    int conta_partida = 0;
-    while (Comprimento(partida) > 5 && conta_partida < 2) {
+    int conta_partida = 0; //contador para guardar quantos aviões são removidos da partida
+    while (Comprimento(partida) > 5 && conta_partida < 2) { //Remove dois aviões da partida enquanto a partida tiver mais de 5 aviões
         Sai(partida);
         conta_partida++;
     }
-    if(Comprimento(chegando) < 10){
+    if(Comprimento(chegando) < 10){ //reseta o estado da variável "aeroporto_abriu" para false se a fila chegando tiver menos de 10 aviões (aeroporto não está mais recém-aberto)
         aeroporto_abriu = false; // Reseta o estado de aeroporto recém-aberto
     }
 }
-
 
 void Inverte(Fila& f) {
     if (Vazia(f) || f.primeira->seguinte == nullptr) // Se a fila estiver vazia ou tiver apenas um elemento, não há necessidade de inverter
